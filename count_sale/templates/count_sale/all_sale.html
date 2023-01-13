@@ -1,0 +1,20 @@
+{% extends 'count_sale/base.html' %}
+
+{% block title %}
+Добавление текста
+{% endblock %}
+
+{% block content %}
+<p> <h1>Все продажи</h1> </p>
+    {% for item in all_item_sell %}
+
+        <div class = "alert alert-warning mt-2">
+            <h5>{{ item.get_menue_choices_display }} - {{ item.count }} - {{ item.date_sale }}</h5>
+            
+        </div>
+
+    {% endfor %}
+    
+    
+ 
+{% endblock %}

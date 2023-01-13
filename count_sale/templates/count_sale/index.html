@@ -1,0 +1,20 @@
+{% extends 'count_sale/base.html' %}
+
+{% block title %}
+Добавление текста
+{% endblock %}
+
+{% block content %}
+<center><p><h1>  Добавляем то что продали </h1> </p> </center>
+
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p><h3> Тут количество товаров</h3> </p> </br>
+    <p> {{ form.count }} </p> </br>
+    <p> <h3> Тут идет выбор товара который ты продал</h3> </p> </br>
+    <p> {{ form.menue_choices }} </p> </br>
+
+    <button type="btn btn-success">Записать данные</button>
+ </form>
+{% endblock %}
